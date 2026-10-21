@@ -32,7 +32,7 @@ fi; echo "$(MAINDIR)/OpCode-core/Makefile")
 
 .PHONY: init installDependencies all upload serve
 
-init: | checkout-submodules $(TEXBUILDDIR)/pdfArticle.cls $(TEXBUILDDIR)/labels4easylist.sty $(TEXBUILDDIR)/vtable.sty $(TEXBUILDDIR)/ehhline.sty $(TEXBUILDDIR)/tikzPackets.sty
+init: | checkout-submodules
 	@ echo "init done"
 
 installDependencies:
