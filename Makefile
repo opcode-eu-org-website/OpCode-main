@@ -36,8 +36,8 @@ init: | checkout-submodules $(TEXBUILDDIR)/pdfArticle.cls $(TEXBUILDDIR)/labels4
 	@ echo "init done"
 
 installDependencies:
-	$(SUDO_CMD) cd $(MAINDIR)/OpCode-core && make installCoreDependencies
-	$(SUDO_CMD) apt install -y  texlive-xetex texlive-luatex texlive-latex-extra texlive-font-utils fonts-symbola wget gnuplot
+	cd $(MAINDIR)/OpCode-core && $(SUDO_CMD) make installCoreDependencies
+	$(SUDO_CMD) apt install -y  texlive-xetex texlive-luatex texlive-latex-extra texlive-font-utils texlive-lang-polish fonts-symbola wget gnuplot
 
 all:
 	$(MAKE) buildAll

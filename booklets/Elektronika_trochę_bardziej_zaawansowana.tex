@@ -110,7 +110,7 @@ Tą cechę diody można wykorzystać np. do stworzenia regulowanego dzielnika (r
 
 Przy wzmacnianiu sygnałów tranzystor pracuje w \href{https://pl.wikipedia.org/wiki/Tranzystor bipolarny#Stany_pracy}{stanie aktywnym} czyli napięcie przyłożone do bazy jest pomiędzy napięciem kolektora a emitera. W przypadku wykorzystywania jako przełącznik tranzystor pracuje w stanach zatkania (nie przewodzi) lub nasycenia (nie ogranicza). Poniższa ilustracja przedstawia podstawową polaryzację tranzystora.
 
-\begin{center}\includegraphics{img/elektronika2/tranzystory}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/tranzystory}\end{center}
 
 Strzałka w symbolu tranzystora (umieszczana na emiterze) pokazuje kierunek przepływu prądu przez emiter.
 Pokazuje ona kierunek przepływu prądu przez złącz P-N (diodę) baza-emiter, zatem wskazuje także kierunek prądu bazy.
@@ -128,7 +128,7 @@ Większość z nich jednak nie zdąży zrekombinować w bazie (jest ona cienka) 
 Zatem tranzystor zachowuje się jak (regulowane prądem) źródło prądowe.
 W obwodzie kolektora wprowadza się zazwyczaj rezystor (Rc) mający na celu zamianę sygnału prądowego uzyskiwanego dzięki tranzystorowi na napięcie, z którego jest łatwiej korzystać niż z prądu.
 
-\begin{center}\includegraphics{img/elektronika2/uklady_polaryzacji_npn}\end{center}
+\begin{center}\includegraphics[width=0.75\textwidth]{img/elektronika2/uklady_polaryzacji_npn}\end{center}
 
 Ze względu na znaczny rozrzut wartości $\beta$ pomiędzy egzemplarzami układ taki jest trudny do praktycznego stosowania (rezystor ustalający prąd bazy należałoby dobierać do konkretnego tranzystora / stosować rezystor regulowany i go dostrajać), dlatego najczęściej stosowany jest „{\bf układ z stałym potencjałem bazy}”.
 W układzie takim do bazy podłączamy pewien ustalony potencjał (na tle wysoki aby nieznajomość spadku na złączu PN - czy to jest 0.6V czy 0.7V itp - była pomijalna), a poprzez zastosowanie opornika emiterowego (Re) ustalamy prąd emitera.
@@ -153,7 +153,7 @@ Tranzystor w stan nasycenia wprowadzać należy z (dwu - trzy krotnym) zapasem p
 Stan zatkania polega na zaporowej polaryzacji obu złącz czyli $V_E \geq V_B \leq V_C$ (NPN) lub $V_E \leq V_B \geq V_C$ (PNP).
 W tym wypadku należy szczególnie zwrócić uwagę na (niewielkie) napięcia przebicia spolaryzowanego zaporowo złącza baza-emiter).
 
-\begin{center}\includegraphics{img/elektronika2/nasycenie-zatkanie}\end{center}
+\begin{center}\includegraphics[width=0.75\textwidth]{img/elektronika2/nasycenie-zatkanie}\end{center}
 
 Nasycenie NPN gdy: $I_C > V_{cc} / R_{L_{min}}$, gdzie $I_C = \beta_{min} I_B$, a $I_B = \frac{V_{ster} - 0.7V}{R_B}$ zatem otrzymaliśmy warunek na rezystor bazy: $R_B < \beta_{min} (V_{ster} - 0.7V) \frac{R_{L_{min}}}{V_{cc}}$. Dla PNP rozumujemy analogicznie, tyle że prąd bazy zależy od napięcia zasilania a nie sterowania, czyli: $R_B < \beta_{min} (V_{cc} - 0.7V) \frac{R_{L_{min}}}{V_{cc}}$. Warto zauważyć, że $\frac{R_{L_{min}}}{V_{cc}} = 1/I_{C_{max\ ukl}}$.
 
@@ -177,7 +177,7 @@ Tranzystory J-FET cechują się symetrią pomiędzy źródłem a drenem, ale prz
 Tranzystory J-FET zazwyczaj polaryzuje się poprzez połączenie przez duży opór ($R_B$ rzędu giga omów) bramki do masy, co wraz z małym prądem bramki zapewnia na niej potencjał 0V.
 Jako że J-FET przy $U_{GS} = 0$ przewodzi (i to maksymalny prąd) to taka polaryzacja powoduje przepływ prądu DS co w związku z oporem $R_S$ pomiędzy źródłem a masą prowadzi do podniesienia potencjału na źródle czyli pojawienia się ujemnego napięcia $U_{GS} = U_{R_S}$ i ograniczenia prądu.
 
-\begin{center}\includegraphics{img/elektronika2/jfet}\end{center}
+\begin{center}\includegraphics[width=0.35\textwidth]{img/elektronika2/jfet}\end{center}
 
 Jako że występują dwa tryby pracy JFETów to przy wykonywaniu obliczeń konieczna jest identyfikacja z którym trybem pracy mamy do czynienia.
 Możemy wykonać to orientacyjnie na podstawie porównania wartości $R_D$ i $R_S$ - gdy $R_D >> R_0$ to możemy podejrzewać obszar triodowy / nienasycenia ($I_D = \beta \cdot U_{GS} \cdot [2(U_{GS}-U_T) - U_{DS}]$), gdzie tranzystor zachowuje się jak opornik regulowany.
@@ -190,7 +190,7 @@ W odróżnieniu od tranzystora tyrystor przewodzi również po zaniku napięcia 
 
 W zrozumieniu jak to działa przydany może być schemat zastępczy tyrystora na tranzystorach bipolarnych:
 
-\begin{center}\includegraphics{img/elektronika2/tyrystor}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/tyrystor}\end{center}
 
 
 \section{Radiatory}
@@ -230,7 +230,7 @@ Typowym zastosowaniem tranzystora jest wzmacnianie sygnałów.
 Dalej będziemy przez jakiś czas przyjmować że mamy doczynienia z „małym sygnałem” czyli takim którego dołożenie powoduje niewielkie odchylenia od punktu pracy (takie że można zaniedbać krzywiznę charakterystyki).
 Wyróżnić można 3 podstawowe układy pracy tranzystora bipolarnego w wzmacniaczu sygnału (pokazane na przykładzie układu polaryzacji z opornikiem emiterowym):
 
-\begin{center}\includegraphics{img/elektronika2/uklady_pracy_npn}\end{center}
+\begin{center}\includegraphics[width=0.75\textwidth]{img/elektronika2/uklady_pracy_npn}\end{center}
 
 W przypadku pracy w układzie wspólnego emitera, generator sygnału dokładamy poprzez kondensator do spolaryzowanej w stanie aktywnym bazy.
 W efekcie tego na stały prąd wyjściowy nakłada się prąd związany z sygnałem wejściowym wynoszący $I_C \inpoint{AC} = g_m U_{b'e} \inpoint{AC}$, gdzie $g_m = {I_{CQ} \over \varphi_{_T}} \approx {1 \over r_{eb'}}$ jest nachyleniem charakterystyki w punkcie pracy, a $U_{b'e} \inpoint{AC}$ jest sygnałem dołożonym na złącze baza-emiter (w przybliżeniu równym sygnałowi wejściowemu).
@@ -313,7 +313,7 @@ Przy obliczaniu pojemności uwzględniamy ich otoczenie rezystorowe - $R_{WE} + 
 \end{enumerate}
 
 \subsection{Wtórnik emiteorowy}
-\begin{center}\includegraphics{img/elektronika2/wtornik}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/wtornik}\end{center}
 
 Każdy wtórnik jest układem typu „wspólny kolektor” (ale na odwrót nie zawsze).
 Układ taki (w odróżnieniu od wspólnego emitera czy też wspólnej bazy) jest w stanie wzmacniać nie tylko małe ale także duże sygnały.
@@ -343,13 +343,13 @@ Punkt pracy ustalany tak samo jak dla układów WE.
 
 
 \subsection{Lustro prądowe}
-\begin{center}\includegraphics{img/elektronika2/lustro}\end{center}
+\begin{center}\includegraphics[width=0.25\textwidth]{img/elektronika2/lustro}\end{center}
 
 T1 i T2 muszą mieć zapewnioną tą samą temperaturę (najlepiej być wykonane w ramach jednego układu scalonego.
 T1 pracuje jako dioda (stosujemy tranzystor aby zapewnić taką samą charakterystykę jak T2), która wraz z R1 tworzy sprzężony termicznie z T2 dzielnik sterujący tranzystorem T2. Układ ten sterowany prądem płynącym przez R1 powoduje przepływ (niemalże) takiego samego prądu poprzez RL.
 
 \subsection{Wzmacniacz różnicowy}
-\begin{center}\includegraphics{img/elektronika2/wzmacniacz_roznicowy}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/wzmacniacz_roznicowy}\end{center}
 
 Układ ten może pełnić rolę klucza prądowego (gdy podany sygnał na tyle duży aby zatkać jeden z tranzystorów) lub wzmacniacza (gdy pracować będą oba tranzystory.
 Układ jest czuły na różnicę napięć przyłożonych do in1 i in2.
@@ -359,7 +359,7 @@ W przypadku układu z tranzystorami NPN „bardziej” przewodzić będzie tranz
 Fakt tego że on przewodzi powoduje ustalenie się potencjału w węźle łączącym emitery obu tranzystorów na wartość napięcia jego bazy pomniejszonego o spadek na przewodzącym złączu PN.
 W sytuacji gdy napięcia baz obu tranzystorów są odpowiednio bliskie przewodzić będą oba, zakres ten określa się strefą przejściową i wynosi ona $4 \varphi_{_T}$.
 
-%\begin{center}\includegraphics{img/elektronika2/wzmacniacz_roznicowy_przejsciowa}\end{center}
+%\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/wzmacniacz_roznicowy_przejsciowa}\end{center}
 
 Jeżeli pracujemy w zakresie strefy przejściowej układ ten traktować należy jako wzmacniacz (poza tym zakresem jak wspomniano jest kluczem prądowym).
 Posiada on wtedy wzmocnienie $k_{u_i} = \frac{R_{C_i}}{r_{eb'_1} + r_{eb'_2}}$, gdzie $i$ jest numerem wyjścia/rezystora kolektorowego z którego pobieramy napięcie wyjściowe.
@@ -404,7 +404,7 @@ Na stopniu wejściowym posiada on wzmacniacz różnicowy z lustrem, dalej jest u
 Układ ten może być wykorzystywany jako komparator do porównywania napięć.
 Ponadto komparatory scalone posiadają taki sam symbol, jednak są innymi układami - dużo szybciej przełączają swoje wyjście przy zmianie wejścia niż robi to wzmacniacz operacyjny.
 
-\begin{center}\includegraphics{img/elektronika2/wzmacniacz_operacyjny}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/wzmacniacz_operacyjny}\end{center}
 
 Jako iż wzmocnienie wzmacniaczy operacyjnych jest bardzo duże nie da się w praktyce wykorzystać ich bezpośrednio do wzmacniania sygnału.
 Robi się to z wykorzystaniem sprzężenia zwrotnego, czyli podaniem przeskalowanego sygnału wyjściowego na wejście.
@@ -426,7 +426,7 @@ Poza tym konieczność ładowania/rozładowywania tej pojemności prowadzi do dr
 \subsubsection{Problem zasilania jednobiegunowego}
 W przypadku konieczności zasilenia wzmacniacza operacyjnego jedno biegunowo, należy zadbać o dodanie odpowiedniej wartości stałej do sygnału wejściowego na wzmacniacz oraz takiej samej wartości do sygnału podawanego na drugie wejście wzmacniacza. Poniżej pokazane zostały rozwiązania układowe umożliwiające realizację tego wymogu (metodę prostego uzyskania „masy wirtualnej” dla takich rozwiązań (w tym wypadku 6V) przedstawiono poniżej):
 
-\begin{center}\includegraphics{img/elektronika2/wzmacniacz_operacyjny_jednobiegunowo}\end{center}
+\begin{center}\includegraphics[width=0.75\textwidth]{img/elektronika2/wzmacniacz_operacyjny_jednobiegunowo}\end{center}
 
 \subsection{Źródła napięcia i prądu}
 
@@ -438,14 +438,14 @@ W niektórych przypadkach uzasadnione jest skorzystanie z lustra prądowego, jak
 Przy pomocy wzmacniacza operacyjnego i tranzystora jesteśmy w stanie zrealizować precyzyjne (odporne na wahania temperaturowe itp) źródło prądowe, tak prądu wpływającego (NPN) jak i wypływającego (PNP).
 Ponadto możemy w łatwy, napięciowy sposób regulować prąd tego źródła (poprzez zmianę $V_{ref}$.
 
-\begin{center}\includegraphics{img/elektronika2/zrodlo_pradowe_precyzyjne}\end{center}
+\begin{center}\includegraphics[width=0.35\textwidth]{img/elektronika2/zrodlo_pradowe_precyzyjne}\end{center}
 
 \subsubsection{Dioda Zenera}
 Najprostsze stabilizatory napięcia można zrealizować w oparciu o diodę Zenera.
 Niestety spadek napięcia na diodzie jest funkcją prądu, ponadto najprostszy układ bez tranzystorowy charakteryzuje się znaczną rezystancją wyjściową.
 Problemem może być także to, iż aby uzyskać nominalny spadek napięcia trzeba puścić zazwyczaj przynajmniej 5mA, a jednocześnie należy uważać aby nie przekroczyć maksymalnej mocy która może wydzielić się na diodzie.
 
-\begin{center}\includegraphics{img/elektronika2/stabilizatory_z_zenerem}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/stabilizatory_z_zenerem}\end{center}
 
 Obliczanie elementów (stabilizator bez tranzystora):
 \begin{enumerate}
@@ -465,7 +465,7 @@ Obliczanie elementów (stabilizator z tranzystorem):
 \subsubsection{Źródło masy wirtualnej}
 Wspomniane wcześniej źródło masy wirtualnej można zrealizować np. na wzmacniaczu operacyjnym:
 
-\begin{center}\includegraphics{img/elektronika2/zrodlo_masy_wirtualnej}\end{center}
+\begin{center}\includegraphics[width=0.25\textwidth]{img/elektronika2/zrodlo_masy_wirtualnej}\end{center}
 
 \subsubsection{Stabilizatory z wzmacniaczem błędu}
 Na trochę zbliżonej do źródła masy wirtualnej zasadzie funkcjonuje stabilizator z wzmacniaczem błędu (będący podstawą popularnych stabilizatorów scalonych).
@@ -474,21 +474,21 @@ Ponadto zastosowanie $R_2$ umożliwia stosowanie źródeł referencyjnych o napi
 Funkcję wzmacniacza błędu może pełnić np. wzmacniacz operacyjny lub różnicowy.
 Często spotkać można różnicowy z lustrem gdyż pozwala to na osiągnięcie małego drop-out'u (różnicy między minimalnym napięciem zasilania a napięciem wyjściowym).
 
-\begin{center}\includegraphics{img/elektronika2/stabilizator_z_wmacniaczem_bledu}\end{center}
+\begin{center}\includegraphics[width=0.35\textwidth]{img/elektronika2/stabilizator_z_wmacniaczem_bledu}\end{center}
 
 \subsubsection{Ogranicznik nadprądowy}
 Istotnym aspektem układów zasilania jest ich zabezpieczenie przed poborem zbyt dużego prądu (funkcjonalność bezpiecznika elektronicznego).
 Układ taki można zrealizować np. w następujący sposób (nadmierny prąd powoduje nadmierny spadek na $R = {0.6\rm{V} \over I_{max}}$, co prowadzi do otwarcia Q2 i odciągania prądu z bazy Q1 - zakładamy że Q1 sterowany z jakiegoś źródła o niewielkiej wydajności prądowej - wzmacniacza błędu):
 
-\begin{center}\includegraphics{img/elektronika2/ogranicznik_nadpradowy}\end{center}
+\begin{center}\includegraphics[width=0.35\textwidth]{img/elektronika2/ogranicznik_nadpradowy}\end{center}
 
 Poniższy schemat przedstawia typowe realizacje samodzielnych \href{https://en.wikipedia.org/wiki/Current limiting}{ograniczników prądowych} włączanych od strony masy (na tranzystorach NPN) lub od strony zasilania (na PNP):
 
-\begin{center}\includegraphics{img/elektronika2/ogranicznik_nadpradowy2}\end{center}
+\begin{center}\includegraphics[width=0.7\textwidth]{img/elektronika2/ogranicznik_nadpradowy2}\end{center}
 
 \subsubsection{Przetwornica step-up}
 
-\begin{center}\includegraphics{img/elektronika2/step_up}\end{center}
+\begin{center}\includegraphics[width=0.7\textwidth]{img/elektronika2/step_up}\end{center}
 
 Działanie przedstawionej przetwornicy podwyższającej oparte jest na ładowaniu prądem cewki L1 (w czasie gdy Q1 w stanie nasycenia) oraz wyciąganiu z niej tego prądu celem ładowania C2 (w czasie gdy Q1 w stanie zatkania).
 W sytuacji gdyby nie było obciążenia oraz D2 napięcie na kondensatorze chciałoby wzrosnąć do nieskończoności, prowadząc do jego przebicia, lub przebicia Q1.
@@ -502,7 +502,7 @@ Warto jednak zadbać aby układ pracował z częstotliwością nad akustyczną (
 
 \subsubsection{Przetwornica step-down}
 
-\begin{center}\includegraphics{img/elektronika2/step_down}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/step_down}\end{center}
 
 Działanie przedstawionej przetwornicy opiera się na takiej samej zasadzie jak ściemniacze elektroniczne, czyli na załączaniu i wyłączaniu obwodu na odpowiednie jednostki czasu, aby obniżyć wartość średniego napięcia wyjściowego do zadanej.
 Sterowanie takie nadaje się bez problemowo do urządzeń takich jak grzałki, żarówki itp.
@@ -514,12 +514,12 @@ $$U_{WY} = U_{WE}{t_1 \over t_1 + t_2}$$
 \subsection{Przerzutniki}
 
 \subsubsection{Bistabilny}
-\begin{center}\includegraphics{img/elektronika2/przerzutnik_bistabilny}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/przerzutnik_bistabilny}\end{center}
 Układ ten służy do zapamiętania stanu binarnego. Może być przełączony poprzez podanie krótkiego sygnału na którejś z wejść lub zwarcie któregoś wyjścia do masy.
 powoduje to rozpoczęcie przewodzenia przez wybrany z tranzystorów, co prowadzi do spadku napięcia na bazie drugiego tranzystora, prowadząc do jego zatkania i trwałego ustalenia stanu wysokiego na bazie wybranego tranzystora.
 
 \subsubsection{Monostabilny}
-\begin{center}\includegraphics{img/elektronika2/przerzutnik_monostabilny}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/przerzutnik_monostabilny}\end{center}
 Układ służy do generacji impulsu trwającego ustaloną długość.
 Działa on podobnie jak przedstawiony przerzutnik bistabilny, z taką różnicą iż krótkotrwałe zwarcie wejścia do masy powoduje obniżenie potencjału bazy T2 o napięcie do jakiego został naładowany C1 (w normalnym stanie $U_{CC}-0.7\rm{V}$.
 Powoduje to zatkanie T2 i przewodzenie T1, następuje także ładowanie C1 z stopniowym zwiększaniem napięcia na bazie T2 aż do osiągnięcia sytuacji pierwotnej.
@@ -527,7 +527,7 @@ Należy zwrócić uwagę że po zatkaniu T1 (zaprzestaniu generowania sygnału w
 Wadą takiego rozwiązania są duże ujemne napięcia na bazach tranzystorów w chwili przerzutu.
 
 \subsubsection{Astabilny}
-\begin{center}\includegraphics{img/elektronika2/przerzutnik_astabilny}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/przerzutnik_astabilny}\end{center}
 Przerzutnik ten służy do generacji sygnału prostokątnego o zadanym wypełnieniu.
 Poszczególne półokresy wynoszą: $t_x = \tau \ln({u(\infty) - u(0) \over u(\infty) - u(t_x)})$, gdzie:
 $u(0)$  napięcie początkowe asymptota procesu,
@@ -538,7 +538,7 @@ Działanie układu jest podobne do opisanego przerzutnika montostabilnego z tym 
 Dodatkową wadą tego rozwiązania jest problem startu przy wypełnieniu 1/2 (jednakowych elementach) i łagodnym włączaniu.
 
 \subsubsection{Shmitta}
-\begin{center}\includegraphics{img/elektronika2/przerzutnik_shmitta}\end{center}
+\begin{center}\includegraphics[width=0.55\textwidth]{img/elektronika2/przerzutnik_shmitta}\end{center}
 Służy od do uzyskania histerezy - większe napięcie powoduje przejście w stan wysoki, a mniejsze od niego w stan niski.
 Pozwala to m.in. na odszumianie sygnałów.
 Idea działania polega na zmianie potencjału drugiego wejścia wzmacniacza różnicowego zależnie od jego stanu.
@@ -548,7 +548,7 @@ Występujący efekt millerowski na T2 w tym przerzutniku można usuwać np. popr
 \subsubsection{Zewnętrzna pętla opóźnienia}
 Podobnie jak przerzutnik Shmitta działają np. bramki cyfrowe tego typu.
 Bramkę taką możemy wykorzystać jako przerzutnik astabilny:
-\begin{center}\includegraphics{img/elektronika2/zewnetrzna_petla}\end{center}
+\begin{center}\includegraphics[width=0.3\textwidth]{img/elektronika2/zewnetrzna_petla}\end{center}
 Korzystamy tutaj z histerezy tej bramki (napięcie na kondensatorze zmienia się pomiędzy tymi wartościami, a napięcie wyjściowe zgodnie z stanami logicznymi bramki.
 Długości półokresów wynoszą określa $t_x = \tau \ln({u(\infty) - u(0) \over u(\infty) - u(t_x)})$, gdzie $\tau = R_1 C_1$.
 
@@ -557,7 +557,7 @@ Idea tego typu układów polega na napięciowym (na ogół prądowym, a dopiero 
 Realizowane jest to poprzez wpychanie lub wyciąganie prądu z kondensatora C1 podłączonego do wejścia układu z histerezą.
 Wpychanie i wyciąganie prądu może być zrealizowane na rozmaite sposoby - np. tak jak przedstawiono na poniższym schemacie poprzez wzmacniacz różnicowy z lustrem lub wzmacniacz różnicowy z dwoma źródłami prądowymi (jedno będące wielokrotnością drugiego.
 
-\begin{center}\includegraphics{img/elektronika2/vco}\end{center}
+\begin{center}\includegraphics[width=0.75\textwidth]{img/elektronika2/vco}\end{center}
 
 \subsection{Wzmacniacz mocy}
 
@@ -566,7 +566,7 @@ Podstawowym układem na którym można oprzeć tego typu rozwiązania jest wtór
 Niestety układ ten cechuje się strefą martwą przy przełączaniu co powoduje konieczność zastosowania rozsuwnika poziomów.
 Na poniższym schemacie przedstawiono dwa warianty (prosty - bez dbania o drop-out oraz bardziej rozbudowany) takiego wzmacniacza. 
 
-\begin{center}\includegraphics{img/elektronika2/wzmacniacz_mocy}\end{center}
+\begin{center}\includegraphics[width=0.9\textwidth]{img/elektronika2/wzmacniacz_mocy}\end{center}
 
 Należy zapewnić diodom lub tranzystorowi robiącego za rozsównik napięć taką samą temperaturę jak tranzystorom mocy Q1 i Q2.
 Cp wspomaga rozsównik przy skokach.
