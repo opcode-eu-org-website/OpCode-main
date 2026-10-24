@@ -1,0 +1,11 @@
+/Blender.xhtml https://blog.opcode.eu.org/2023/10/23/blender.html 301
+/more_advanced/electronics/uklady_tranzystorowe https://www.opcode.eu.org/Elektronika_troch%C4%99_bardziej_zaawansowana.pdf 301
+/more_advanced/electronics/uklady_tranzystorowe/* https://www.opcode.eu.org/Elektronika_troch%C4%99_bardziej_zaawansowana.pdf 301
+
+/vip https://vip.opcode.eu.org/ 301
+/vip/* https://vip.opcode.eu.org/:splat 301
+
+/rrp https://blog.opcode.eu.org/about/rrp/ 301
+/rrp/* https://blog.opcode.eu.org/about/rrp/:splat 301
+/bercik https://blog.opcode.eu.org/about/rrp/ 301
+/bercik/* https://blog.opcode.eu.org/about/rrp/:splat 301

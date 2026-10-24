@@ -43,6 +43,7 @@ jobs:
         run: |
           export TMPDIR=${{ runner.temp }}
           make all
+          cp _redirects output-www
           cp OpCode-core/lib/404.html output-www
 
       - name: Upload artifact
