@@ -22,18 +22,21 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Set up Chromium
-        uses: browser-actions/setup-chrome@v2
-        with:
-          chrome-version: 138
-        id: setup-chrome
-
       - name: Install system dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y make git
           sudo TMPDIR=${{ runner.temp }} make installDependencies
           
+      - name: Set up Chromium
+        uses: browser-actions/setup-chrome@v2
+        # run after `Install system dependencies` to avoid `error while loading shared libraries`
+        with:
+          chrome-version: 138
+        id: setup-chrome
+
+      - name: Fix Chromium
+        run: |
           # `apt install chromium` on Ubuntu doesn't actually install chromium ...
           # so we use `setup-chrome` step and create simple run script here:
           echo 'exec ${{ steps.setup-chrome.outputs.chrome-path }} --no-sandbox "$@"' > /usr/local/bin/chromium
